@@ -1,27 +1,3 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
-%
-%	Copyright (c) 2015 Jan Küster
-%
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%
-%
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-
-
 %============================================================================%
 %
 %	DOCUMENT DEFINITION
@@ -30,7 +6,6 @@
 
 %we use article class because we want to fully customize the page and dont use a cv template
 \documentclass[10pt,A4]{article}
-
 
 %----------------------------------------------------------------------------------------
 %	ENCODING
@@ -72,24 +47,11 @@
 \usepackage{fontawesome}
 
 %----------------------------------------------------------------------------------------
-%	ICON-SET EMBEDDING
-%----------------------------------------------------------------------------------------
-
-% at this point we simplify our icon-embedding by simply referring to a set of png images.
-% if you find a good way of including svg without conflicting with other packages you can
-% replace this part
-\newcommand{\icon}[2]{\colorbox{thirdcol}{\makebox(#2, #2){\textcolor{sectcol}{\csname fa#1\endcsname}}}}	%icon shortcut
-\newcommand{\icontext}[3]{ 						%icon with text shortcut
-	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{\textcolor{textcol}{#3}}
-}
-
-%----------------------------------------------------------------------------------------
 %	PAGE LAYOUT  DEFINITIONS
 %----------------------------------------------------------------------------------------
 
 %debug page outer frames
 %\usepackage{showframe}
-
 
 %define page styles using geometry
 \usepackage[a4paper]{geometry}
@@ -104,12 +66,10 @@
 %less space between header and content
 \setlength{\headheight}{-5pt}
 
-
 %customize entries left, center and right
 %\lhead{}
 %\chead{}
 %\rhead{}
-
 
 %indentation is zero
 \setlength{\parindent}{0mm}
@@ -128,7 +88,6 @@
 \newcolumntype{x}[1]{%
 >{\raggedleft\hspace{0pt}}p{#1}}%
 
-
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
 %----------------------------------------------------------------------------------------
@@ -146,7 +105,6 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
-
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %----------------------------------------------------------------------------------------
@@ -161,7 +119,6 @@
 
 %light background / accent color
 \definecolor{softcol}{RGB}{225,225,225}
-
 
 %============================================================================%
 %
@@ -329,8 +286,6 @@
 	\small Machine Learning Engineer
 \end{center}
 
-
-
 \vspace{6pt}
 
 
@@ -367,6 +322,7 @@ General specialist, specialized generalist.\\  Worker, lurker, soda jerker.\\
 %----------------------------------------------------------------------------------------
 \cvsection{Experience}
 
+%
 \cvevent{2022 - 2023}{Machine Learning Engineer}{Clearview AI}{
 	{Architected and implemented company-wide MLOps strategy},
     {Used ChatGPT for entity extraction from metadata},
@@ -392,7 +348,7 @@ General specialist, specialized generalist.\\  Worker, lurker, soda jerker.\\
 }
 
 
-%\textcolor{softcol}{\hrule}
+% \textcolor{softcol}{\hrule}
 
 
 %
