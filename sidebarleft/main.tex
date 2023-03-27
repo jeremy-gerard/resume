@@ -96,13 +96,13 @@
 \usepackage[a4paper]{geometry}
 
 % remove all possible margins
-\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm}
+\geometry{top=1cm, bottom=0cm, left=1cm, right=1cm}
 
 \usepackage{fancyhdr}
 \pagestyle{empty}
 
 % space between header and content
-% \setlength{\headheight}{0pt}
+\setlength{\headheight}{0pt}
 
 % indentation is zero
 \setlength{\parindent}{0mm}
@@ -119,7 +119,6 @@
 \newcolumntype{x}[1]{%
 >{\raggedleft\hspace{0pt}}p{#1}}%
 
-
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
 %----------------------------------------------------------------------------------------
@@ -135,7 +134,7 @@
 
 %for drawing graphics
 \usepackage{tikz}
-\usetikzlibrary{shapes, backgrounds,mindmap, trees}
+\usetikzlibrary{shapes, backgrounds, mindmap, trees}
 
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
@@ -147,14 +146,13 @@
 \definecolor{maincol}{RGB}{ 225, 0, 0 }
 
 % accent color, secondary
-% \definecolor{accentcol}{RGB}{ 250, 150, 10 }
+\definecolor{accentcol}{RGB}{ 250, 150, 10 }
 
 % dark color
 \definecolor{darkcol}{RGB}{ 70, 70, 70 }
 
 % light color
 \definecolor{lightcol}{RGB}{245,245,245}
-
 
 % Package for links, must be the last package used
 \usepackage[hidelinks]{hyperref}
@@ -163,7 +161,6 @@
 % to keep padding included in width calculations
 % can also be used for other boxes / environments
 \newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
-
 
 %============================================================================%
 %
@@ -200,7 +197,7 @@
 % Renders a a CV section headline with a nice underline in main color.
 % param 1: section title
 \newcommand{\cvsection}[1] {
-	\vspace{6pt}
+	\vspace{8pt}
 	\cvtext{
 		\textbf{\LARGE{\textcolor{darkcol}{\uppercase{#1}}}}\\[-4pt]
 		\textcolor{maincol}{ \rule{0.1\textwidth}{2pt} } \\
@@ -247,6 +244,7 @@
 	% we wrap this part in a parbox, so title and description are not separated on a pagebreak
 	% if you need more control on page breaks, remove the parbox
 	\parbox{\mpwidth}{
+		\vspace{-8pt}
 		\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
 	 		\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
 			\textcolor{maincol}{\textbf{#3}} & \\
@@ -258,18 +256,18 @@
 	}
 
 	\ifthenelse{\isempty{#5}}{}{
-		\vspace{9pt}
+		\vspace{1pt}
 		{#5}
 	}
 
 	\ifthenelse{\isempty{#6}}{}{
-		\vspace{9pt}
+		\vspace{1pt}
 		\cvtext{\textbf{Technologies include:}}\\
 		{#6}
 	}
 
 	\ifthenelse{\isempty{#7}}{}{
-		\vspace{9pt}
+		\vspace{-10pt}
 		\cvtext{\textbf{Achievements include:}}\\
 		{#7}
 	}
@@ -331,6 +329,7 @@
 %	IMAGE
 %----------------------------------------------------------------------------------------
 % \includegraphics[width=\linewidth]{profile-small.jpeg}	%trimming relative to image size
+
 %---------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
@@ -430,10 +429,10 @@
 	{}
 	{\vspace{-20pt}
 		\cvlist{
-			\item Architected and implemented company-wide MLOps strategy
-			\item Used ChatGPT for entity extraction from metadata
-			\item Built and deployed multiple cutting-edge computer vision models for presentation attack detection and identity verification
-			\item Standardized production ecosystem across machine learning frameworks, architecture and deployment, including unit testing and model optimization for CPU and GPU
+			\item Architected and implemented company-wide MLOps strategy \vspace{-4pt}
+			\item Used ChatGPT for entity extraction from metadata \vspace{-4pt}
+			\item Built and deployed multiple cutting-edge computer vision models for presentation attack detection and identity verification \vspace{-4pt}
+			\item Standardized production ecosystem across machine learning frameworks, architecture and deployment, including unit testing and model optimization for CPU and GPU \vspace{-4pt}
 			\item Delivered image enhancement and exposure correction algorithms used by investigators to assist in facial recognition from poor-quality photos
 		}}
 	{}
@@ -444,14 +443,55 @@
 	{2018 - 2022}
 	{Tyson Foods}
 	{Lead Developer, Emerging Technology}
-	{Successfully architected and led the successful development and deployment of a diverse range of projects and soultions around ML, CV, hyperspectral imaging, IoT, robotics - most of which were recognized company-wide for their success in integrating new technologies ito the business for the first time, and enabling unprecedented improvements in business operations through data and automation}
-	{\cvlist{
-		\item Spearheaded the architecture, development, and implementation of two separate end-to-end MLOps pipelines in AWS to autonomously handle image collection from edge to cloud, image annotation and curation, model training and evaluation, and model deployment back to the edge
-		\item Listed as a principal inventor on a pending patent for the design and architecture of a novel solution which autonomously measures internal temperature of cooked food products using a robotic arm, a 3D linescan camera, and an infrared camera
-		\item Acted as data science lead for company-wide COVID-19 response effort. Devised forecasting, risk evaluation, and transmission rate factro models and personally develop4d a NRT-interactive dashboard and front-end used by Tyson's ELT
-	}}
+	% {Successfully architected and led the successful development and deployment of a diverse range of projects and soultions around ML, CV, hyperspectral imaging, IoT, robotics - most of which were recognized company-wide for their success in integrating new technologies ito the business for the first time, and enabling unprecedented improvements in business operations through data and automation}
+	{}
+	{\vspace{-20pt}
+		\cvlist{
+			\item Spearheaded the architecture, development, and implementation of two separate end-to-end MLOps pipelines in AWS to autonomously handle image collection from edge to cloud, image annotation and curation, model training and evaluation, and model deployment back to the edge \vspace{-4pt}
+			\item Listed as a principal inventor on a pending patent for the design and architecture of a novel solution which autonomously measures internal temperature of cooked food products using a robotic arm, a 3D linescan camera, and an infrared camera \vspace{-4pt}
+			\item Acted as data science lead for company-wide COVID-19 response effort. Devised forecasting, risk evaluation, and transmission rate factro models and personally developed a NRT-interactive dashboard and front-end used by Tyson's ELT
+		}}
 	{}
 	{}
+	% {\cvlist{
+	% 	\item Spearheaded the architecture, development, and implementation of two separate end-to-end MLOps pipelines in AWS to autonomously handle image collection from edge to cloud, image annotation and curation, model training and evaluation, and model deployment back to the edge
+	% 	\item Listed as a principal inventor on a pending patent for the design and architecture of a novel solution which autonomously measures internal temperature of cooked food products using a robotic arm, a 3D linescan camera, and an infrared camera
+	% 	\item Acted as data science lead for company-wide COVID-19 response effort. Devised forecasting, risk evaluation, and transmission rate factro models and personally develop4d a NRT-interactive dashboard and front-end used by Tyson's ELT
+	% }}
+	% {}
+	% {}
+
+\cvevent
+	{2016 - 2018}
+	{Hewlett Packard Enterprise}
+	{IT Systems Analyst, Marketing}
+	{}
+	{\vspace{-20pt}
+		\cvlist{
+			\item Front-end optimization technical lead for www.hpe.com \vspace{-4pt}
+			\item Owned and managed domain portfolio for enterprise-wide customer-facing webspace \vspace{-4pt}
+			\item DNS \& Traffic Management Support Team technical lead \vspace{-4pt}
+			\item Managed CDN implementation including FEO, global content delivery, caching strategy and security\vspace{-4pt}
+		}
+	}
+	{}
+	{}
+
+\cvevent
+	{2009 - 2012}
+	{Neural Instrumentation Lab, Temple University}
+	{Research Associate, Project Manager}
+	{}
+	{\vspace{-20pt}
+		\cvlist{
+			\item Developed an adaptive motor control system based on cerebellar neuronal microcircuitry that used recurrent feedback from a visual error signal to dynamically improve kinematic accuracy of a self-built pneumatic robotic arm \vspace{-4pt}
+			\item Wrote original machine learning and computer vision software for real-time motion-tracking in C++ \vspace{-4pt}
+			\item Presented research at 33rd Annual International Conference of the IEEE Engineering in Medicine and Biology Society
+		}}
+	{}
+	{}
+
+	\vfill\null
 
 \end{rightcolumn}
 \end{paracol}
