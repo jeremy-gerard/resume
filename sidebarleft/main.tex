@@ -244,11 +244,11 @@
 	% we wrap this part in a parbox, so title and description are not separated on a pagebreak
 	% if you need more control on page breaks, remove the parbox
 	\parbox{\mpwidth}{
-		\vspace{-8pt}
+		\vspace{8pt}
 		\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
 	 		\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
 			\textcolor{maincol}{\textbf{#3}} & \\
-		\end{tabular*}\\[8pt]
+		\end{tabular*}\\[14pt]
 
 		\ifthenelse{\isempty{#4}}{}{
 			\cvtext{#4}\\
@@ -412,16 +412,18 @@
 %----------------------------------------------------------------------------------------
 % \vfill\null
 % \cvsection{\faSquareO \hspace{0.1cm} PROFILE}
+\vspace{20pt}
 \cvsection{PROFILE}
 
-\cvtext{Cross-disciplined technologist, developer, and machine learning engineer with a neuroscience background and a passion for learning and problem solving, seeking to further a career in applied technology. Most interested in a role which demands and cultivates a diverse range of knowledge and technical aptitude, adaptive critical thinking, and creative solution design.}
+\cvtext{Cross-disciplined technologist and machine learning engineer with a neuroscience background seeking new opportunities in applied technology that demand a diverse range of knowledge and technical aptitude, and require adaptive critical thinking. I'm looking for a role where I can use my experience to make a meaningful contribution while also continuing to grow and learn at pace with the latest technologies.}
 
 %---------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
 % \vfill\null
+\vspace{20pt}
 \cvsection{\faBriefcase \hspace{1pt} EXPERIENCE}
-
+\vspace{-10pt}
 \cvevent
 	{2022 - 2023}
 	{Clearview AI}
@@ -429,12 +431,11 @@
 	{}
 	{\vspace{-20pt}
 		\cvlist{
-			\item Architected and implemented company-wide MLOps strategy \vspace{-4pt}
-			\item Used ChatGPT for entity extraction from metadata \vspace{-4pt}
-			\item Built and deployed multiple cutting-edge computer vision models for presentation attack detection and identity verification \vspace{-4pt}
-			\item Standardized production ecosystem across machine learning frameworks, architecture and deployment, including unit testing and model optimization for CPU and GPU \vspace{-4pt}
-			\item Delivered image enhancement and exposure correction algorithms used by investigators to assist in facial recognition from poor-quality photos
-		}}
+			\item Devised and executed an enterprise-wide MLOps strategy, including\\standardization of production ecosystems, unit testing, and model \\optimization for CPU and GPU. \vspace{-4pt}
+			\item Developed multiple cutting-edge computer vision models for \\presentation attack detection and identity verification, leveraging \\ChatGPT for entity extraction from metadata. \vspace{-4pt}
+			\item Delivered image enhancement and exposure correction algorithms to \\support investigators in facial recognition from poor-quality photos. \vspace{-4pt}
+		}
+	}
 	{}
 	{}
 
@@ -447,9 +448,9 @@
 	{}
 	{\vspace{-20pt}
 		\cvlist{
-			\item Spearheaded the architecture, development, and implementation of two separate end-to-end MLOps pipelines in AWS to autonomously handle image collection from edge to cloud, image annotation and curation, model training and evaluation, and model deployment back to the edge \vspace{-4pt}
-			\item Listed as a principal inventor on a pending patent for the design and architecture of a novel solution which autonomously measures internal temperature of cooked food products using a robotic arm, a 3D linescan camera, and an infrared camera \vspace{-4pt}
-			\item Acted as data science lead for company-wide COVID-19 response effort. Devised forecasting, risk evaluation, and transmission rate factro models and personally developed a NRT-interactive dashboard and front-end used by Tyson's ELT
+			\item Designed, developed, and implemented two end-to-end MLOps pipelines in AWS that autonomously handle image collection, annotation, curation, model training, evaluation, and deployment back to the edge. \vspace{-4pt}
+			\item Contributed to a pending patent for a novel solution that measures the internal temperature of cooked food products using a robotic arm, a 3D linescan camera, and an infrared camera. \vspace{-4pt}
+			\item  Led the data science effort for the company's COVID-19 response, devising forecasting, risk evaluation, and transmission rate factor models, and personally developing a real-time interactive dashboard used by Tyson's ELT.
 		}}
 	{}
 	{}
@@ -464,14 +465,12 @@
 \cvevent
 	{2016 - 2018}
 	{Hewlett Packard Enterprise}
-	{IT Systems Analyst, Marketing}
+	{IT Systems Analyst, Marketing IT}
 	{}
 	{\vspace{-20pt}
 		\cvlist{
-			\item Front-end optimization technical lead for www.hpe.com \vspace{-4pt}
-			\item Owned and managed domain portfolio for enterprise-wide customer-facing webspace \vspace{-4pt}
-			\item DNS \& Traffic Management Support Team technical lead \vspace{-4pt}
-			\item Managed CDN implementation including FEO, global content delivery, caching strategy and security\vspace{-4pt}
+			\item Served as the technical lead for front-end optimization of hpe.com, \\including DNS and traffic management support team. \vspace{-4pt}
+			\item Managed a domain portfolio for enterprise-wide customer-facing webspace, and led the implementation of a CDN strategy that included FEO, global content delivery, caching, and security. \vspace{-4pt}
 		}
 	}
 	{}
@@ -484,8 +483,7 @@
 	{}
 	{\vspace{-20pt}
 		\cvlist{
-			\item Developed an adaptive motor control system based on cerebellar neuronal microcircuitry that used recurrent feedback from a visual error signal to dynamically improve kinematic accuracy of a self-built pneumatic robotic arm \vspace{-4pt}
-			\item Wrote original machine learning and computer vision software for real-time motion-tracking in C++ \vspace{-4pt}
+			\item Managed a project that developed an adaptive motor control system for a pneumatic robotic arm based on cerebellar neuronal microcircuitry, \\incorporating real-time motion-tracking using original machine learning and computer vision software in C++. \vspace{-4pt}
 			\item Presented research at 33rd Annual International Conference of the IEEE Engineering in Medicine and Biology Society
 		}}
 	{}
